@@ -37,7 +37,7 @@
   text-decoration: none;
   color: white;
   background-color: #fba229;
-  font-size: 10px;
+  font-size: 13px;
   padding: 14px 20px 14px 20px;
   border-radius: 22px;
 }
@@ -46,7 +46,7 @@
   font-family: "roboto";
   text-decoration: none;
   color: #fff;
-  font-size: 11px;
+  font-size: 14px;
 }
 .Home_nav_link:hover {
   cursor: pointer;
@@ -73,6 +73,7 @@
   gap: 20px;
   padding: 0px 100px 100px 100px;
   margin-left: -100px;
+  margin-top: -150px;
 }
 
 .Home_mid_header {
@@ -108,7 +109,7 @@
 
   color: white;
   background-color: #fba229;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px 35px 10px 35px;
   border-radius: 29px;
   transition: 0.3s;

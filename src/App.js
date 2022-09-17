@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 import graphic1 from "./Assets/graphic1.png";
 import chat from "./Assets/chats.svg";
 import dots from "./Assets/dots.svg";
+import { useRef } from "react";
+import lgbt from "./Assets/diverse.svg";
 
 import Foorter from "./Components/Footer/Footer";
 
 function App() {
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="page">
       <div className="Home">
@@ -17,7 +24,9 @@ function App() {
               Home
             </a>
 
-            <a className="Home_nav_link">About</a>
+            <a className="Home_nav_link" onClick={handleClick}>
+              About
+            </a>
 
             <a className="Home_nav_link" href="#">
               Sign up
@@ -57,6 +66,29 @@ function App() {
           <img className="friends_dots2" src={dots} />
 
           <img className="friends_img" src={chat} />
+        </div>
+      </div>
+      <div className="empathy" ref={ref}>
+        <div className="empathy_left">
+          <img className="empathy_img" src={lgbt} />
+          <p className="diver">
+            diver<span className="sea">sea</span>
+          </p>
+        </div>
+        <div className="empathy_right">
+          <p className="empathy_about">ABOUT US</p>
+          <p className="empathy_title">
+            Lack of empathy towards different cultures.
+          </p>
+          <p className="empathy_desc">
+            We have instituted an anonymous moderated chat system to protect the
+            right to privacy of our users and streamline better communication.
+            Thus eliminating prejudice and encouraging open-mindedness towards
+            people of a different race, religions, sex, etc.
+          </p>
+          <Link style={{ textDecoration: "none" }} to="/Chat">
+            <a className="Home_mid_button1">Start chatting</a>
+          </Link>
         </div>
       </div>
 

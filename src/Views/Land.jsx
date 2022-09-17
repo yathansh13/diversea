@@ -1,4 +1,4 @@
-import "./Land.css";
+// import "./Land.css";
 import { Link } from "react-router-dom";
 import graphic1 from "../Assets/graphic1.png";
 import chat from "../Assets/chats.svg";
@@ -31,10 +31,10 @@ function App() {
               About
             </a>
 
-            <a className="Home_nav_link" href="#">
+            <a className="Home_nav_link" href="register">
               Sign up
             </a>
-            <a className="Home_nav_button" href="#">
+            <a className="Home_nav_button" href="login">
               Profile
             </a>
           </div>

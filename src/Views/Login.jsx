@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import leftImg from "../Assets/ll.png";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import "./Login.css";
+// import "./Login.css";
 
 const Login = () => {
     const [err, setErr] = useState(false);

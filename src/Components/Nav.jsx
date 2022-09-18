@@ -4,10 +4,7 @@ import { auth } from '../firebase'
 import { AuthContext } from '../context/AC'
 
 const Nav = () => {
-  const {currentUser} = useContext(AuthContext)
-
-
-  
+  const {currentUser} = useContext(AuthContext)  
   return (
     <div className='navbar'>
       <span className="logo">diver<span className="logo-sea">sea</span></span>

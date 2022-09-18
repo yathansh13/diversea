@@ -16,7 +16,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
-    const Name = e.target[0].value;
+    const displayName = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
     const file = e.target[3].files[0];
@@ -24,18 +24,18 @@ const Register = () => {
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
       const date = new Date().getTime();
-      const storageRef = ref(storage, `${Name + date}`);
+      const storageRef = ref(storage, `${displayName + date}`);
 
       await uploadBytesResumable(storageRef, file).then(() => {
         getDownloadURL(storageRef).then(async (URLdown) => {
           try {
             await updateProfile(res.user, {
-              Name,
+              displayName,
               photoURL: URLdown,
             });
             await setDoc(doc(db, "users", res.user.uid), {
               uid: res.user.uid,
-              Name,
+              displayName,
               email,
               photoURL: URLdown,
             });

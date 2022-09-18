@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsFillFileImageFill } from "react-icons/bs";
+import { BsImageFill } from "react-icons/bs";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import leftImg from "../Assets/ll.png";
@@ -41,7 +41,7 @@ const Register = () => {
             });
 
             await setDoc(doc(db, "userChats", res.user.uid), {});
-            navigate("/");
+            navigate("/chat");
           } catch (err) {
             console.log(err);
             setErr(true);
@@ -69,8 +69,10 @@ const Register = () => {
           <input required type="password" placeholder="password" />
           <input required style={{ display: "none" }} type="file" id="file" />
           <label htmlFor="file">
-            <BsFillFileImageFill/>
-            <span style={{color:'black',cursor:'pointer'}}>Add profile picture</span>
+          <BsImageFill style={{color:'black',fontSize:'14px'}}/>
+            <span style={{color:'blue',fontSize:'14px', marginLeft:'10px',cursor:'pointer'}}>Add an avatar</span>
+            
+            
           </label>
           <span>Ethnicity</span>
           <select className="etn alldrop" name="Ethn">

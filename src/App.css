@@ -528,3 +528,220 @@
     margin-top: -12px;
     border: 2px solid #101B4F;
 }
+
+.mainChat {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainChat .container {
+  /* border: 1px solid white; */
+  
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .mainChat .container {
+      width: 90%;
+  }
+}
+
+.mainChat .container .sideMenu {
+  flex: 1;
+  position: relative;
+  background-color: #f2f2fc;
+  border-right: 1px solid black;
+}
+
+.mainChat .container .sideMenu .navbar {
+  background-color: #343377;
+  color: #ddddf7;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.mainChat .container .sideMenu .navbar .logo-sea {
+  font-family: 'Poppins';
+  font-size: 25px;
+  font-style: bold;
+  font-weight: 600;
+}
+
+.mainChat .container .sideMenu .navbar .logo {
+  font-family: 'Poppins';
+  font-size: 25px;
+  font-style: normal;
+  font-weight: bold;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-left: 5px;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  .mainChat .container .sideMenu .navbar .logo {
+      display: none;
+  }
+}
+
+.mainChat .container .sideMenu .navbar .profile {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.mainChat .container .sideMenu .navbar .profile img {
+  background-color: #ddddf7;
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.mainChat .container .sideMenu .navbar .profile button {
+  background-color: #fba229;
+  color: #FFFFFF;
+  padding: 0px 7px 0px 7px;
+  font-size: 12px;
+  height: 22px;
+  border: 1px solid #fba229;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .mainChat .container .sideMenu .navbar .profile button {
+      position: absolute;
+      bottom: 10px;
+  }
+}
+
+.mainChat .container .sideMenu .search {
+  border-bottom: 1px solid gray;
+}
+
+.mainChat .container .sideMenu .search .searchForm {
+  padding: 10px;
+}
+
+.mainChat .container .sideMenu .search .searchForm input {
+  background-color: transparent;
+  color: #343377;
+  width: 290px;
+  border: none;
+  outline: none;
+}
+
+.mainChat .container .sideMenu .search .searchForm input::placeholder {
+  color: #343377;
+}
+
+.mainChat .container .sideMenu .profileChat {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #343477;
+  cursor: pointer;
+}
+
+.mainChat .container .sideMenu .profileChat:hover {
+  background-color: #2f2d52;
+}
+
+.mainChat .container .sideMenu .profileChat img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.mainChat .container .sideMenu .profileChat .userChatInfo span {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+.mainChat .container .sideMenu .profileChat .userChatInfo p {
+  font-size: 14px;
+  color: #343377;
+}
+
+.mainChat .container .chat {
+  flex: 2;
+}
+
+
+.mainChat .container .chat .chatInfo {
+  height: 50px;
+  background-color: #fba229;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  padding: 10px;
+  color: black;
+}
+
+.mainChat .container .chat .chatIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.mainChat .container .chat .chatIcons img {
+  height: 24px;
+  cursor: pointer;
+}
+
+.mainChat .container .chat .input {
+  height: 50px;
+  background-color: white;
+  padding: 10px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainChat .container .chat .input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #2f2d52;
+  font-size: 18px;
+}
+
+.mainChat .container .chat .input input::placeholder {
+  color: lightgray;
+}
+
+.mainChat .container .chat .input .send {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mainChat .container .chat .input .send img {
+  height: 24px;
+  cursor: pointer;
+}
+
+.mainChat .container .chat .input .send button {
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  background-color: #fba229;
+  cursor: pointer;
+  border-radius: 5px;
+}

@@ -6,6 +6,8 @@ import { AuthContext } from '../context/AC'
 const Nav = () => {
   const {currentUser} = useContext(AuthContext)
 
+
+  
   return (
     <div className='navbar'>
       <span className="logo">diver<span className="logo-sea">sea</span></span>
@@ -17,5 +19,4 @@ const Nav = () => {
     </div>
   )
 }
-
 export default Nav

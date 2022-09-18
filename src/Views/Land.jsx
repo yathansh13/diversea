@@ -47,7 +47,7 @@ function App() {
               <Link style={{ textDecoration: "none" }} to="/Chat">
                 <a className="Home_mid_button1"> Chats </a>
               </Link>
-              <a className="Home_mid_button2"> Profile </a>
+              <a href="login" className="Home_mid_button2"> Profile </a>
             </div>
           </div>
 
@@ -112,7 +112,7 @@ function App() {
             <Link style={{ textDecoration: "none" }} to="/Chat">
               <a className="yellow_right_button1"> Chats </a>
             </Link>
-            <a className="yellow_right_button2"> Profile </a>
+            <a href="login" className="yellow_right_button2"> Profile </a>
           </div>
           <svg
             width="167"
